@@ -1,0 +1,4 @@
+#!/bin/sh
+
+current_branch=$(git branch | grep '* ' | awk '{print $2}')
+git push -u origin $current_branch
