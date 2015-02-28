@@ -1,0 +1,32 @@
+[user]
+	name = davegolland
+	email = dave@getprismatic.com
+[push]
+	default = current
+[alias]
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  lga = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all
+  lgd = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -p
+  df = diff --color --color-words --abbrev
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+  up = "!git remote update -p; git merge --ff-only @{u}"
+
+  # list the most recent branches
+  recent = for-each-ref --count=30 --sort=-committerdate refs/heads/ --format='%(refname:short)' 
+
+
+[color]
+    branch = auto
+    diff = auto
+    interactive = auto
+    status = auto
+[credential]
+	helper = osxkeychain
+[core]
+	editor = /usr/bin/vim
