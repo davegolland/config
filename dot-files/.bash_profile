@@ -1,6 +1,7 @@
 # set the prompt to be pretty
-source ~/.git-prompt.sh
+source ~/config/dot-files/.git-prompt.sh
 PS1='\n.[\e[0;33m\w\e[m]    $(__git_ps1 "(%s)")\n$ '
+source ~/config/dot-files/.git-completion.bash
 
 test -r /sw/bin/init.sh && . /sw/bin/init.sh
 
