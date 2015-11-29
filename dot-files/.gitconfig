@@ -15,7 +15,7 @@
   hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
   type = cat-file -t
   dump = cat-file -p
-  up = "!git remote update -p; git merge --ff-only @{u}"
+  up = "!git remote update -p; git merge --ff-only @{u}" # consider https://github.com/aanand/git-up
 
   # list the most recent branches
   recent = for-each-ref --count=30 --sort=-committerdate refs/heads/ --format='%(refname:short)' 
